@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>ThymeLeaf Test</title>
+    <title></title>
     <style type="text/css">
 table {
 	border-collapse: collapse;
@@ -22,21 +22,21 @@ td {
     <table border="1">
         <tr>
             <td>Id</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Age</td>
+            <td>Imie</td>
+            <td>Nazwisko</td>
+            <td>Wiek</td>
             <td>...</td>
         </tr>
         <tr th:each="emp : ${employees}">
             <td th:text="${emp.id}">id</td>
-            <td th:text="${emp.firstName}">first name</td>
-            <td th:text="${emp.lastName}">last name</td>
-            <td th:text="${emp.age}">age</td>
-            <td><a th:href="@{/employee/edit/{id}(id=${emp.id})}">Edit</a>
-                <a th:href="@{/employee/delete/{id}(id=${emp.id})}">Delete</a></td>
+            <td th:text="${emp.firstName}">imie</td>
+            <td th:text="${emp.lastName}">nazwisko</td>
+            <td th:text="${emp.age}">wiek</td>
+            <td><a th:href="@{/employee/edit/{id}(id=${emp.id})}">Edytuj</a>
+                <a th:href="@{/employee/delete/{id}(id=${emp.id})}">Usun</a></td>
         </tr>
     </table>
-    <br> <a th:href="@{/employee/add}">Add Employee</a> <br>
+    <br> <a th:href="@{/employee/add}">Dodaj pracownika</a> <br>
 </div>
 </body>
 </html>

@@ -2,34 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Thymeleaf Test</title>
+    <title></title>
 </head>
 <body>
 <div align="center">
     <br>
-    <h3>Add Employee</h3>
+    <h3>Dodaj pracownika</h3>
     <br>
     <form th:action="@{/employee/add}" th:object="${addEmployee}"
           method="post">
         <table>
             <tr>
-                <td>Emp Id</td>
+                <td>ID Pracownika</td>
                 <td><input type="text" name="id" /></td>
             </tr>
             <tr>
-                <td>First Name</td>
+                <td>Imie</td>
                 <td><input type="text" name="firstName" /></td>
             </tr>
             <tr>
-                <td>Last Name</td>
+                <td>Nazwisko</td>
                 <td><input type="text" name="lastName" /></td>
             </tr>
             <tr>
-                <td>Age</td>
+                <td>Wiek</td>
                 <td><input type="number" name="age" /></td>
             </tr>
         </table>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Potwierd?" />
     </form>
 </div>
 </body>

@@ -2,36 +2,37 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Thymeleaf Test</title>
+    <title></title>
 </head>
 <body>
-    <div align="center">
-        <br>
-        <h3>Edytuj Pracownika</h3>
-        <br>
-        <form th:action="@{employee/edit/{id}(id=*{id})}"
-              th:object="${editEmployee}" method="post">
-            <table>
-                <tr>
-                    <td>ID Pracownika</td>
-                    <td><input type="text" disabled="disabled" name="id" th:field="*{id}"/></td>
-                </tr>
-                <tr>
-                    <td>Imię</td>
-                    <td><input type="text" name="firstName" th:field="*{firstName}"/></td>
-                </tr>
-                <tr>
-                    <td>Nazwisko</td>
-                    <td><input type="text" name="lastName" th:field="*{lastName}"/></td>
-                </tr>
-                <tr>
-                    <td>Wiek</td>
-                    <td><input type="number" name="age" th:field="*{age}"/></td>
-                </tr>
-            </table>
-            <input type="submit" value="Submit"/>
-        </form>
-    </div>
-
+<div align="center">
+    <br>
+    <h3>Edytuj dane pracownika</h3>
+    <br>
+    <form th:action="@{/employee/edit/{id}(id=*{id})}"
+          th:object="${editEmployee}" method="post">
+        <table>
+            <tr>
+                <td>ID pracownika</td>
+                <td><input type="text" disabled="disabled" name="id"
+                           th:field="*{id}" /></td>
+            </tr>
+            <tr>
+                <td>Imie</td>
+                <td><input type="text" name="firstName"
+                           th:field="*{firstName}" /></td>
+            </tr>
+            <tr>
+                <td>Nazwisko</td>
+                <td><input type="text" name="lastName" th:field="*{lastName}" /></td>
+            </tr>
+            <tr>
+                <td>Wiek</td>
+                <td><input type="number" name="age" th:field="*{age}" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="Potwierd?" />
+    </form>
+</div>
 </body>
 </html>
